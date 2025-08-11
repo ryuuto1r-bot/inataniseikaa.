@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗案内 - 稲谷製菓</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-button.open .accordion-arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-[#FDFCF8] text-[#3a2d27]">
+
+    <nav class="sticky top-0 bg-[#FDFCF8] bg-opacity-90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="./index.html" class="font-serif text-2xl font-bold text-[#8B4513]">稲谷製菓</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-gray-600 hover:text-[#8B4513]">ホーム</a>
+                    <a href="./about.html" class="text-gray-600 hover:text-[#8B4513]">稲谷製菓について</a>
+                    <a href="./products.html" class="text-gray-600 hover:text-[#8B4513]">お品書き</a>
+                    <a href="./access.html" class="text-[#8B4513] font-bold">店舗案内</a>
+                    <a href="./store.html" class="text-gray-600 hover:text-[#8B4513]">オンラインストア</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-20 px-6 bg-white border-b">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 font-serif">店舗案内</h1>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">都城の町並みと共に。皆様のお越しを心よりお待ちしております。</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16">
+        <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 mb-20">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold mb-6">アクセスマップ</h2>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.450383121544!2d131.0605983151638!3d31.72584198132785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353f3a093d5c2d7f%3A0x5c5b5a9a8cb3d6d!2z5a6g5Z-O55yM6YO95Z-O5Z-O5biC5Lit55S6!5e0!3m2!1sja!2sjp!4v1660196594285!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-serif text-2xl font-bold mb-6">店舗情報</h2>
+                    <div class="space-y-4 text-lg">
+                        <p><strong class="w-24 inline-block">住所</strong>： 〒885-0071 宮崎県都城市中町1-1</p>
+                        <p><strong class="w-24 inline-block">電話番号</strong>： 0986-22-XXXX</p>
+                        <p><strong class="w-24 inline-block">営業時間</strong>： 9:00 〜 18:00</p>
+                        <p><strong class="w-24 inline-block">定休日</strong>： 毎週水曜日</p>
+                        <p><strong class="w-24 inline-block">駐車場</strong>： 店舗隣に3台分ございます</p>
+                        <p><strong class="w-24 inline-block">アクセス</strong>： JR都城駅から徒歩10分</p>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-12">
+                <img src="https://placehold.co/1200x600/D2B48C/FFFFFF?text=趣のある店舗の外観" alt="店舗の外観" class="rounded-lg shadow-md">
+            </div>
+        </div>
+        
+        <section>
+            <h2 class="font-serif text-3xl font-bold mb-6 text-center">よくあるご質問</h2>
+            <div class="max-w-2xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>予約や取り置きはできますか？</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>はい、お電話にて承っております。チーズ饅頭は夕方には売り切れてしまうこともございますので、事前のご予約がおすすめです。</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>クレジットカードは使えますか？</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>はい、各種クレジットカード、および一部の電子マネーに対応しております。</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>贈答用の包装はしてもらえますか？</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>はい、無料で承っております。ご予算やご用途に合わせて詰め合わせもご提案いたしますので、お気軽にお申し付けください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#3a2d27] text-white mt-20">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">稲谷製菓</h3>
+                    <p class="text-gray-400">〒885-0071 宮崎県都城市中町1-1</p>
+                    <p class="text-gray-400">電話：0986-22-XXXX</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">営業時間</h3>
+                    <p class="text-gray-400">9:00 〜 18:00</p>
+                    <p class="text-gray-400">定休日：毎週水曜日</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">サイトマップ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">稲谷製菓について</a></li>
+                        <li><a href="./products.html" class="text-gray-400 hover:text-white">お品書き</a></li>
+                        <li><a href="./access.html" class="text-gray-400 hover:text-white">店舗案内</a></li>
+                        <li><a href="./store.html" class="text-gray-400 hover:text-white">オンラインストア</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-8">
+                <p>&copy; 2025 Inatani Seika. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('open');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
