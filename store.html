@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンラインストア - 稲谷製菓</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-button.open .accordion-arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-[#FDFCF8] text-[#3a2d27]">
+
+    <nav class="sticky top-0 bg-[#FDFCF8] bg-opacity-90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="./index.html" class="font-serif text-2xl font-bold text-[#8B4513]">稲谷製菓</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-gray-600 hover:text-[#8B4513]">ホーム</a>
+                    <a href="./about.html" class="text-gray-600 hover:text-[#8B4513]">稲谷製菓について</a>
+                    <a href="./products.html" class="text-gray-600 hover:text-[#8B4513]">お品書き</a>
+                    <a href="./access.html" class="text-gray-600 hover:text-[#8B4513]">店舗案内</a>
+                    <a href="./store.html" class="text-[#8B4513] font-bold">オンラインストア</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-20 px-6 bg-white border-b">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 font-serif">オンラインストア</h1>
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg">都城の伝統の味を、ご家庭へお届けします。</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+
+        <section class="mb-20 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="font-serif text-3xl font-bold mb-6 text-center">今月のおすすめ</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <img src="https://placehold.co/600x400/D2B48C/3a2d27?text=贈答用詰め合わせ" alt="贈答用詰め合わせ" class="rounded-lg shadow-md">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold">贈答用詰め合わせ「都城だより」</h3>
+                    <p class="text-lg font-bold text-[#8B4513] my-2">3,000円 (税込)</p>
+                    <p class="text-gray-600 mb-4">人気のチーズ饅頭と、伝統のからいも飴を詰め合わせた、贈り物に最適な一品です。お中元やお歳暮、大切な方へのご挨拶にいかがでしょうか。</p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center border rounded-lg">
+                            <button class="quantity-btn p-2" data-action="decrease">-</button>
+                            <span class="quantity-display w-12 text-center">1</span>
+                            <button class="quantity-btn p-2" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart-btn flex-grow bg-[#8B4513] text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-80 transition-colors" data-id="gift_set" data-name="贈答用詰め合わせ" data-price="3000">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col">
+                <img src="https://placehold.co/600x400/F5DEB3/3a2d27?text=チーズ饅頭" alt="チーズ饅頭" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-serif text-xl font-bold">チーズ饅頭 (10個入)</h3>
+                    <p class="text-lg font-bold text-[#8B4513] my-2">1,600円 (税込)</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">サクッとした生地と濃厚チーズのハーモニー。当店一番人気の商品です。</p>
+                    <div class="flex items-center gap-2 mt-auto">
+                        <div class="flex items-center border rounded-lg">
+                            <button class="quantity-btn p-2 text-sm" data-action="decrease">-</button>
+                            <span class="quantity-display w-10 text-center text-sm">1</span>
+                            <button class="quantity-btn p-2 text-sm" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart-btn flex-grow bg-[#8B4513] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-80 transition-colors text-sm" data-id="cheese_manju" data-name="チーズ饅頭 (10個入)" data-price="1600">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col">
+                <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=からいも飴" alt="からいも飴" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-serif text-xl font-bold">からいも飴 (2袋セット)</h3>
+                    <p class="text-lg font-bold text-[#8B4513] my-2">1,000円 (税込)</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">都城産さつまいもの豊かな風味。どこか懐かしい、素朴な甘さが人気です。</p>
+                    <div class="flex items-center gap-2 mt-auto">
+                        <div class="flex items-center border rounded-lg">
+                            <button class="quantity-btn p-2 text-sm" data-action="decrease">-</button>
+                            <span class="quantity-display w-10 text-center text-sm">1</span>
+                            <button class="quantity-btn p-2 text-sm" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart-btn flex-grow bg-[#8B4513] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-80 transition-colors text-sm" data-id="karaimo_ame" data-name="からいも飴 (2袋セット)" data-price="1000">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col">
+                <img src="https://placehold.co/600x400/D2B48C/3a2d27?text=かすてら" alt="かすてら" class="w-full h-64 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-serif text-xl font-bold">特製かすてら (1本)</h3>
+                    <p class="text-lg font-bold text-[#8B4513] my-2">1,200円 (税込)</p>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">しっとりとした生地と、底に敷かれたザラメの食感が楽しい、昔ながらのかすてらです。</p>
+                     <div class="flex items-center gap-2 mt-auto">
+                        <div class="flex items-center border rounded-lg">
+                            <button class="quantity-btn p-2 text-sm" data-action="decrease">-</button>
+                            <span class="quantity-display w-10 text-center text-sm">1</span>
+                            <button class="quantity-btn p-2 text-sm" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart-btn flex-grow bg-[#8B4513] text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-80 transition-colors text-sm" data-id="castella" data-name="特製かすてら (1本)" data-price="1200">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="mt-20">
+            <h2 class="font-serif text-3xl font-bold mb-6 text-center">送料・お支払いについて</h2>
+            <div class="max-w-2xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>お支払い方法</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>クレジットカード決済、銀行振込、代金引換がご利用いただけます。</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>送料について</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>全国一律800円（税込）です。ただし、5,000円以上お買い上げの場合は送料無料となります。</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="accordion-button w-full p-4 text-left font-bold flex justify-between items-center">
+                        <span>発送・お届けについて</span>
+                        <span class="accordion-arrow transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600">
+                        <p>ご注文確定後、通常3営業日以内に発送いたします。お届け日時のご指定も可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#3a2d27] text-white mt-20">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">稲谷製菓</h3>
+                    <p class="text-gray-400">〒885-0071 宮崎県都城市中町1-1</p>
+                    <p class="text-gray-400">電話：0986-22-XXXX</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">営業時間</h3>
+                    <p class="text-gray-400">9:00 〜 18:00</p>
+                    <p class="text-gray-400">定休日：毎週水曜日</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">サイトマップ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">稲谷製菓について</a></li>
+                        <li><a href="./products.html" class="text-gray-400 hover:text-white">お品書き</a></li>
+                        <li><a href="./access.html" class="text-gray-400 hover:text-white">店舗案内</a></li>
+                        <li><a href="./store.html" class="text-gray-400 hover:text-white">オンラインストア</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-8">
+                <p>&copy; 2025 Inatani Seika. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Icon -->
+    <div class="fixed bottom-5 right-5">
+        <div class="relative">
+            <div class="h-16 w-16 bg-[#8B4513] rounded-full flex items-center justify-center shadow-lg">
+                <span class="text-white text-3xl">🛒</span>
+            </div>
+            <div id="cart-count" class="absolute -top-1 -right-1 h-7 w-7 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold border-2 border-white">0</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = {};
+            const cartCountElement = document.getElementById('cart-count');
+
+            function updateCartCount() {
+                const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            }
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const card = e.target.closest('.product-card, section');
+                    const id = e.target.dataset.id;
+                    const name = e.target.dataset.name;
+                    const price = parseInt(e.target.dataset.price, 10);
+                    const quantityDisplay = card.querySelector('.quantity-display');
+                    const quantity = parseInt(quantityDisplay.textContent, 10);
+
+                    if (cart[id]) {
+                        cart[id].quantity += quantity;
+                    } else {
+                        cart[id] = { name, price, quantity };
+                    }
+                    
+                    updateCartCount();
+                    
+                    const originalText = e.target.textContent;
+                    e.target.textContent = '追加しました！';
+                    e.target.classList.add('bg-green-600');
+                    setTimeout(() => {
+                        e.target.textContent = originalText;
+                        e.target.classList.remove('bg-green-600');
+                        quantityDisplay.textContent = '1';
+                    }, 1500);
+                });
+            });
+
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const card = e.target.closest('.product-card, section');
+                    const quantityDisplay = card.querySelector('.quantity-display');
+                    let quantity = parseInt(quantityDisplay.textContent, 10);
+                    const action = e.target.dataset.action;
+
+                    if (action === 'increase') {
+                        quantity++;
+                    } else if (action === 'decrease' && quantity > 1) {
+                        quantity--;
+                    }
+                    quantityDisplay.textContent = quantity;
+                });
+            });
+
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('open');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
