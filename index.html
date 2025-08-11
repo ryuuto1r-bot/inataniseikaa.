@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稲谷製菓 - 都城の伝統の味を、次の百年へ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-[#FDFCF8] text-[#3a2d27]">
+
+    <nav class="sticky top-0 bg-[#FDFCF8] bg-opacity-90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="./index.html" class="font-serif text-2xl font-bold text-[#8B4513]">稲谷製菓</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-[#8B4513] font-bold">ホーム</a>
+                    <a href="./about.html" class="text-gray-600 hover:text-[#8B4513]">稲谷製菓について</a>
+                    <a href="./products.html" class="text-gray-600 hover:text-[#8B4513]">お品書き</a>
+                    <a href="./access.html" class="text-gray-600 hover:text-[#8B4513]">店舗案内</a>
+                    <a href="./store.html" class="text-gray-600 hover:text-[#8B4513]">オンラインストア</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <img src="https://placehold.co/1600x900/D2B48C/FFFFFF?text=都城の美しい田園風景" alt="都城の田園風景" class="w-full h-full object-cover">
+        <div class="relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold font-serif leading-tight">ひとつひとつに、<br>都城の心をこめて。</h1>
+            <p class="mt-4 text-lg">創業百年、変わらぬ手作りの味。</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+
+        <section class="text-center mb-20 fade-in-section">
+            <h2 class="font-serif text-3xl font-bold mb-4">稲谷製菓の二枚看板</h2>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">創業以来、都城の皆様に愛され続ける、私たちの誇りです。</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/F5DEB3/3a2d27?text=チーズ饅頭" alt="チーズ饅頭" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-2">チーズ饅頭</h3>
+                        <p class="text-gray-600 mb-4">サクッとした生地の中から、濃厚でクリーミーなチーズがとろり。甘さとしょっぱさの絶妙な調和が、忘れられない味を織りなします。</p>
+                        <a href="./products.html#cheese-manju" class="font-bold text-[#8B4513] hover:underline">詳しく見る →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=からいも飴" alt="からいも飴" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-2">からいも飴</h3>
+                        <p class="text-gray-600 mb-4">都城産さつまいも「黄金千貫」の豊かな風味を、職人が丹念に練り上げた伝統の味。どこか懐かしい、素朴な甘さが口いっぱいに広がります。</p>
+                        <a href="./products.html#karaimo-ame" class="font-bold text-[#8B4513] hover:underline">詳しく見る →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-20 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <img src="https://placehold.co/600x500/8B4513/FFFFFF?text=職人の手" alt="職人の手" class="rounded-lg shadow-md">
+                </div>
+                <div class="md:order-1">
+                    <h2 class="font-serif text-3xl font-bold mb-4">私たちのこだわり</h2>
+                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                        <p>時代が変わっても、私たちは「手作り」と「無添加」にこだわり続けます。気温や湿度に合わせて生地の水分量を調整し、一つ一つ丁寧に餡を包む。その日の素材の顔を見ながら、最適な火加減で焼き上げる。機械では決して真似のできない、職人の勘と経験が、稲谷製菓の味を守り続けています。</p>
+                        <div class="flex space-x-8">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">👐</div>
+                                <p class="font-bold">手作り</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🌱</div>
+                                <p class="font-bold">地元素材</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🌿</div>
+                                <p class="font-bold">無添加</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./about.html" class="mt-8 inline-block bg-[#8B4513] text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-80 transition-colors">稲谷製菓の歴史を見る</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-20 fade-in-section">
+            <h2 class="font-serif text-3xl font-bold mb-12 text-center">お客様の声</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"ここのチーズ饅頭は、他とは全然違います。生地のサクサク感とチーズの塩気が絶妙で、都城に来るたびに必ず買って帰ります。"</p>
+                    <p class="font-bold text-right">- 宮崎市 40代 女性</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"祖母が大好きだった、からいも飴。今も変わらない懐かしい味に、食べるたびに温かい気持ちになります。ずっと作り続けてほしいです。"</p>
+                    <p class="font-bold text-right">- 都城市 30代 男性</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"贈答用の詰め合わせをお願いしました。包装も丁寧で、先方にも大変喜ばれました。また利用させていただきます。"</p>
+                    <p class="font-bold text-right">- 東京都在住 50代 女性</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center fade-in-section">
+            <h2 class="font-serif text-3xl font-bold mb-4">お知らせ</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="border-t border-gray-200 py-6">
+                    <p class="text-gray-500 mb-1">2025年8月11日</p>
+                    <h3 class="text-xl font-bold hover:text-[#8B4513] cursor-pointer">季節限定「日向夏チーズ饅頭」販売開始のお知らせ</h3>
+                </div>
+                <div class="border-t border-gray-200 py-6">
+                    <p class="text-gray-500 mb-1">2025年7月20日</p>
+                    <h3 class="text-xl font-bold hover:text-[#8B4513] cursor-pointer">お盆期間中の営業について</h3>
+                </div>
+                <div class="border-t border-b border-gray-200 py-6">
+                    <p class="text-gray-500 mb-1">2025年7月1日</p>
+                    <h3 class="text-xl font-bold hover:text-[#8B4513] cursor-pointer">オンラインストアをリニューアルしました</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#3a2d27] text-white mt-20">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">稲谷製菓</h3>
+                    <p class="text-gray-400">〒885-0071 宮崎県都城市中町1-1</p>
+                    <p class="text-gray-400">電話：0986-22-XXXX</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">営業時間</h3>
+                    <p class="text-gray-400">9:00 〜 18:00</p>
+                    <p class="text-gray-400">定休日：毎週水曜日</p>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">サイトマップ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white">稲谷製菓について</a></li>
+                        <li><a href="./products.html" class="text-gray-400 hover:text-white">お品書き</a></li>
+                        <li><a href="./access.html" class="text-gray-400 hover:text-white">店舗案内</a></li>
+                        <li><a href="./store.html" class="text-gray-400 hover:text-white">オンラインストア</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 border-t border-gray-700 mt-8 pt-8">
+                <p>&copy; 2025 Inatani Seika. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
